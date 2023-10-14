@@ -143,3 +143,43 @@ class AuthorBook(generics.ListAPIView):
         author = Author.objects.get(name = author_name) # Get the record of the author from author_name
         queryset = author.books.all() # By using related_name(books), get the record of all books of the author 
         return queryset
+    
+
+
+    
+
+
+from django.http import JsonResponse
+from django.views import View
+from . import utils  # Import your utility functions and Status enum
+
+class ResolveQueryView(generics.ListAPIView):
+    queryset = []
+    serializer_class = serializers.Serializer 
+    permission_classes = []
+    def post(self, request, *args, **kwargs):
+        text = request.POST.get('text', 'abra cadabra')
+        print("This is Text:",text)
+        result = utils.engine.get_results(text)
+        reply = ''
+
+        if result['status'] == utils.Status.SUCCESSFULL:
+            reply = utils.query_successfull(result)
+
+        elif result['status'] == utils.Status.INTENT_NOT_FOUND:
+            reply = utils.query_intent_not_found()
+
+        elif result['status'] == utils.Status.SLOT_NOT_FOUND:
+            if result['intent'] == 'searchByGenre':
+                slot = 'genre'
+            elif result['intent'] == 'searchByAuthor':
+                slot = 'author name'
+            else:
+                slot = 'book name'
+            reply = utils.query_slot_not_found(slot)
+
+        result['reply'] = reply
+        result['status'] = result['status'].value
+        return JsonResponse(result)
+
+    

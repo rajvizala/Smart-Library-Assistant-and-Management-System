@@ -14,4 +14,5 @@ urlpatterns = [
     path('recommendations/', RecommendationAPIView.as_view(), name='recommendation'),
     path('genre/<str:category>/', GenreBooksAPIView.as_view()),
     path('author-books/<str:author>/',AuthorBook.as_view()),
+    path('resolver-query/',ResolveQueryView.as_view())
 ]

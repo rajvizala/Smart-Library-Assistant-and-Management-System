@@ -6,13 +6,13 @@ slots:
   - name: book
     entity: book
 utterances:
-  - find me [book](Bridget Jones's Diary)
-  - find me a book named [book](Hunger Games)
-  - can you help me to find [book](A Darkness More Than Night)
-  - where can i find [book](Harry Potter and The Philosopher's Stone)
-  - where is [book](M for Malice) located
-  - I want to know where is [book](The Secret Life of Bees)
-  - I am looking for [book](All Creatures Great and Small)
+  - find me [book](bridget jones's diary)
+  - find me a book named [book](hunger games)
+  - can you help me to find [book](a darkness more than night)
+  - where can i find [book](harry potter and the philosopher's stone)
+  - where is [book](m for malice) located
+  - i want to know where is [book](the secret life of bees)
+  - i am looking for [book](all creatures great and small)
 
 # Search By Book's Author Intent
 ---
@@ -22,12 +22,12 @@ slots:
   - name: author
     entity: author
 utterances:
-  - Can you suggest a book by [author](JK Rowlings)
-  - What are some books by [author](Sandra Brown) that you'd suggest
-  - Which [author](Margaret Yorke)'s book do you think I should read
-  - Could you suggest a book that written by [author](Sara Paretsky)
-  - list some books by [author](Dan Brown)
-  - What are [author](Sandra Brown)'s most popular books you recommend
+  - can you suggest a book by [author](jk rowlings)
+  - what are some books by [author](sandra brown) that you'd suggest
+  - which [author](margaret yorke)'s book do you think I should read
+  - could you suggest a book that written by [author](sara paretsky)
+  - list some books by [author](dan brown)
+  - what are [author](sandra brown)'s most popular books you recommend
 
 # Summarize book
 ---
@@ -37,13 +37,13 @@ slots:
   - name: book
     entity: book
 utterances:
-  - Can you summarize [book](A Darkness More Than Night)
-  - What's the summary of [book](M for Malice)
-  - What can you tell me about [book](The Secret Life of Bees)
-  - Can you tell me the plot of [book](All Creatures Great and Small)
-  - Tell me about the [book](Bridget Jones's Diary)
-  - Can you give me an overview of the [book](Harry Potter and The Prisoner of Azkaban)
-  - I want to know about [book](Roses are Red)
+  - can you summarize [book](a darkness more than night)
+  - what's the summary of [book](m for malice)
+  - what can you tell me about [book](the secret life of bees)
+  - can you tell me the plot of [book](all creatures great and small)
+  - tell me about the [book](bridget jones's diary)
+  - can you give me an overview of the [book](harry potter and the prisoner of azkaban)
+  - i want to know about [book](roses are red)
 
 # Search Book By Genre
 ---
@@ -53,12 +53,12 @@ slots:
   - name: genre
     entity: genre
 utterances:
-  - Suggest me a good [genre](fiction) book
-  - I am looking for some [genre](crime) books to read.
-  - I am in mood for a [genre](mystery) book.
-  - Can you recommend some [genre](juvenile Ffction) books
-  - I want to read an [genre](adventure) book
-  - Can you suggest me some [genre](science fiction) books to read?
+  - suggest me a good [genre](fiction) book
+  - i am looking for some [genre](crime) books to read.
+  - i am in mood for a [genre](mystery) book.
+  - can you recommend some [genre](juvenile Ffction) books
+  - i want to read an [genre](adventure) book
+  - can you suggest me some [genre](science fiction) books to read?
 
 ## Entities
 # Book Entity
@@ -67,15 +67,15 @@ type: entity
 name: book
 automatically_extensible: yes
 values:
-  - Harry Potter and The Philosopher's Stone
-  - The Secret Life of Bees
-  - M for Malice
-  - Bridget Jones's Diary
-  - A Darkness More Than Night
-  - All Creatures Great and Small
-  - Harry Potter and The Prisoner of Azkaban
-  - Roses are Red
-  - Hunger Games
+  - harry potter and the philosopher's stone
+  - The secret life of bees
+  - m for malice
+  - bridget jones's diary
+  - a darkness more than night
+  - all creatures great and small
+  - harry potter and the prisoner of azkaban
+  - roses are red
+  - hunger games
   
 # Author Entity
 ---
@@ -83,14 +83,14 @@ type: entity
 name: author
 automatically_extensible: yes
 values:
-  - JK Rowlings
-  - Sandra Brown
-  - Tom Clancy
-  - Margaret Yorke
-  - Sara Paretsky
-  - Dan Brown
+  - jk rowlings
+  - sandra brown
+  - tom clancy
+  - margaret yorke
+  - sara paretsky
+  - dan brown
 
-# Genre Entity
+# Genre Entity 
 ---
 type: entity
 name: genre
